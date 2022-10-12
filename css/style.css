@@ -58,6 +58,10 @@ section {
     min-height: 100vh;
 }
 
+h1 {
+    font-size: 3em;
+}
+
 section.heroImg {
     padding: 2vh 8vw;
     position:relative;
