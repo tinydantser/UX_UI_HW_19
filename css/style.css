@@ -7,16 +7,20 @@
 }
 
 html {
-    font-size: 1em;
+    font-size: 1.1em;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue",sans-serif;
-    color: #202124;
+    font-family: source-sans-3, sans-serif;
+    color: #3C4141;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #111212;
 }
 
 header {
-    padding: 2vh 0;
+    padding: 4vh 0;
 }
 
 header nav {
@@ -31,7 +35,9 @@ header nav > div {
     gap: 0.5rem;
 }
 header h3 {
+    font-size: 1.33rem;
     font-weight: 400;
+    font-family: eldwin-script, sans-serif;
 }
 
 header nav ul {
@@ -59,20 +65,26 @@ section {
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 2.5rem;
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.5rem;
 }
 
 section.heroImg {
     padding: 2vh 8vw;
     position:relative;
+    overflow:hidden;
 }
 
 section.heroImg .content {
     width:100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 4vw;
+    justify-content: space-between;
 }
 
 section.heroImg img.hero-image {
@@ -88,7 +100,7 @@ section.heroImg .introContainer > * {
 }
 
 p.lead {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     line-height: 2em;
 }
 
@@ -141,47 +153,77 @@ button#fab {
     z-index: 0;
 }
 
+#bg_line_3,
+#bg_line_4 {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 17%;
+    transform: rotate(90deg);
+}
+#bg_line_4 {
+    right: 18%;
+}
+
 section.mySkills {
-    background-color: #202021;
     padding: 4vh 8vw 12vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 section.mySkills h2 {
     text-align: center;
-    line-height: 4em;
-    color: #E7E7E7;
+    position: absolute;
+    top: 2em;
 }
 .flexContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 4vw;
+    width: 100%;
 }
 
 .flexContainer > div {
     display: flex;
     flex-direction: column;
     gap: 2vh;
-    background-color: #3D3D40;
     border-radius: 8px;
     flex: 1 1 0;
+    background-color: hsl(0, 0%, 96%);
 }
 
 .skillContainer h5 {
-    color: #BFBFBF;
     font-size: 15px;
     line-height: 16px;
     letter-spacing: 2px;
     text-transform: uppercase;
     padding: 16px;
-    border-bottom: 1px solid hsl(240, 3%, 35%);
+    border-bottom: 1px solid hsl(0, 0%, 90%);
+}
+
+.skillContainer ul {
+    list-style-type: none;
+}
+.skillContainer ul li::before {
+    content: "";
+    background: linear-gradient(82.06deg, #4158D0 -4.7%, #C850C0 45.73%, #FFCC70 115.42%);
+    display: inline-block;
+    width: 0.6em;
+    height: 0.6em;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 0.5rem;
 }
 
 .skillDescriptions {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 16px;
-    gap: 24px;
+    padding: 0.75rem;
+    gap: 0.5rem;
     
     /* Inside auto layout */
     
@@ -191,10 +233,6 @@ section.mySkills h2 {
     flex-grow: 1;
 }
 
-.skillDescriptions p {
-    color: #E7E7E7;
-}
-
 .iconContainer {
     display: flex;
     flex-direction: row;
@@ -202,7 +240,7 @@ section.mySkills h2 {
     padding: 16px;
     gap: 10px;
 
-    background: #4E4E52;
+    background: hsl(0, 0%, 92%);
     border-radius: 0px 0px 8px 8px;
 
     /* Inside auto layout */
@@ -214,11 +252,13 @@ section.mySkills h2 {
 }
 
 section.myWork {
+    background-color: #202021;
     padding: 4vh 8vw 12vh;
 }
 section.myWork h2 {
     text-align: center;
     line-height: 4em;
+    color: #E7E7E7;
 }
 section.myWork .workGrid {
     display: grid;
@@ -230,6 +270,14 @@ section.myWork .workGrid {
         ;
     gap: 4vw 4vh;
 }
+
+section.myWork .workGrid h3 {
+    color: #BFBFBF;
+}
+section.myWork .workGrid p {
+    color: #E7E7E7;
+}
+
 #mobileOne {
     grid-area: mobileWorkOne;
 }
@@ -244,7 +292,7 @@ section.myWork .workGrid {
     flex-direction: column;
     padding: 24px;
     border-radius: 16px;
-    background-color: #f0f0f0;
+    background-color: #3D3D40;
 }
 .workGrid .workGridItem img {
     max-width:100%;
@@ -257,19 +305,39 @@ section.myWork .workGrid {
 }
 
 footer {
-    background-color: #373738;
+    padding: 4vh 8vw;
+    background-color: #202021;
+    color: #E7E7E7;
+    position:relative;
+    overflow:hidden;
 }
+
+footer h3 {
+    color: #E7E7E7;
+}
+
+footer a {
+    color: #e7e7e7;
+    text-decoration: none;
+}
+
+footer > div {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4vh 0;
+}
+footer .email-container {
+    width: 100%;
+    justify-content: flex-end;
+}
+
 footer ul {
-    display: inline-block;
+    display: flex;
+    gap: 2rem;
     list-style-type: none;
-    padding: 2vh 0;
-    margin: 0 auto;
 }
-footer ul li {
-    display: inline-block;
-    padding: 0 2vw;
-    color: #fff;
-}
+
 
 @media only screen and (max-width: 400px) {
     #menu-list {
