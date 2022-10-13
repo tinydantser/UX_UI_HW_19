@@ -1,3 +1,7 @@
+:root {
+    --primary-color: linear-gradient(89.25deg, #4158D0 1.29%, #C850C0 98.71%);
+}
+
 * {
     border: 0;
     margin: 0;
@@ -106,13 +110,13 @@ p.lead {
 
 button {
     display:flex;
-    padding: 12px 16px;
-    background-image: linear-gradient(82.06deg, #4158D0 -4.7%, #C850C0 45.73%, #FFCC70 115.42%);
-    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    background-image: var(--primary-color);
+    border-radius: 3rem;
     color: #fff;
     font-size: 1.1rem;
     font-weight: 600;
-    box-shadow: 0 1px 4px 0 hsla(304, 100%, 14%, 0.441);
+    box-shadow: 0 2px 5px 0 hsla(304, 100%, 14%, 0.441);
     -webkit-transition: background 5s ;
     -moz-transition: background 5s ;
     -ms-transition: background 5s ;
@@ -120,15 +124,8 @@ button {
     transition: background 5s ;
     cursor: pointer;
 }
-button:hover {
-    background-image: linear-gradient(82.49deg, #4158D0 -83.25%, #C850C0 0.16%, #FFCC70 115.44%);
-    box-shadow: 0 2px 5px 0 hsla(304, 100%, 24%, 0.441);
-}
-button:active {
-    background-image: linear-gradient(82.42deg, #4158D0 0%, #C850C0 93.68%, #FFCC70 223.16%);
-    box-shadow: 0 1px 2px 0 hsla(304, 100%, 12%, 0.541);
-}
 button#fab {
+    border-radius: 0.75rem;
     position:fixed;
     right: 4vw;
     bottom: 4vh;
@@ -195,27 +192,15 @@ section.mySkills h2 {
     background-color: hsl(0, 0%, 96%);
 }
 
-.skillContainer h5 {
-    font-size: 15px;
-    line-height: 16px;
+.skillContainer .skillTitle {
     letter-spacing: 2px;
     text-transform: uppercase;
-    padding: 16px;
+    padding: 1rem;
     border-bottom: 1px solid hsl(0, 0%, 90%);
 }
 
 .skillContainer ul {
-    list-style-type: none;
-}
-.skillContainer ul li::before {
-    content: "";
-    background: linear-gradient(82.06deg, #4158D0 -4.7%, #C850C0 45.73%, #FFCC70 115.42%);
-    display: inline-block;
-    width: 0.6em;
-    height: 0.6em;
-    border-radius: 50%;
-    position: relative;
-    margin-right: 0.5rem;
+    list-style-position: inside;
 }
 
 .skillDescriptions {

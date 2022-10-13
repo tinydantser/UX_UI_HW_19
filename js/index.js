@@ -97,5 +97,34 @@ $(document).ready(function() {
 
     $("#a_contact").click(function() {
         smoother.scrollTo("footer", true, "center center");
-    })
-})
+    });
+
+    $("button").mouseenter(function() {
+        gsap.to(this, {
+            background: "linear-gradient(93.48deg, #4158D0 -13.71%, #C850C0 9.52%)",
+            duration: 0.3
+        });
+    });
+    $("button").mouseleave(function() {
+        gsap.to(this, {
+            background: "linear-gradient(89.25deg, #4158D0 1.29%, #C850C0 98.71%)",
+            duration: 0.3
+        });
+    });
+
+    $("button").mousedown(function() {
+        gsap.to(this, {
+            background: "linear-gradient(92.18deg, #4158D0 86.98%, #C850C0 115.21%)",
+            boxShadow: "none",
+            duration: 0.3
+        });
+    });
+    $("button").mouseup(function() {
+        gsap.to(this, {
+            background: "linear-gradient(93.48deg, #4158D0 -13.71%, #C850C0 9.52%)",
+            boxShadow: "0 2px 5px 0 hsla(304, 100%, 14%, 0.441)",
+            duration: 0.3
+        });
+    });
+});
+
