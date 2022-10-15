@@ -9,6 +9,15 @@ let smoother = ScrollSmoother.create({
 
 $(document).ready(function() {
 
+    $("#copy_btn").click(function() {
+        navigator.clipboard.writeText("sean.dant@gmail.com");
+
+        $("#myTooltip").addClass("showTooltip");
+        setTimeout(function() {
+            $("#myTooltip").removeClass("showTooltip");
+        }, 2000);
+    });
+
     gsap.from("#fab", {
         scrollTrigger: {
             trigger: ".heroImg",

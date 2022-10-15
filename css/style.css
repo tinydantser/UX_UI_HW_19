@@ -155,11 +155,11 @@ button#fab {
     position: absolute;
     height: 100%;
     top: 0;
-    right: 17%;
+    right: 20%;
     transform: rotate(90deg);
 }
 #bg_line_4 {
-    right: 18%;
+    right: 21%;
 }
 
 section.mySkills {
@@ -169,6 +169,7 @@ section.mySkills {
     justify-content: center;
     align-items: center;
     position: relative;
+    background-color: hsl(0, 0%, 92%);
 }
 section.mySkills h2 {
     text-align: center;
@@ -189,18 +190,20 @@ section.mySkills h2 {
     gap: 2vh;
     border-radius: 8px;
     flex: 1 1 0;
-    background-color: hsl(0, 0%, 96%);
+    background-color: hsl(0, 0%, 100%);
 }
 
 .skillContainer .skillTitle {
     letter-spacing: 2px;
     text-transform: uppercase;
     padding: 1rem;
-    border-bottom: 1px solid hsl(0, 0%, 90%);
+    color: #5E6666;
 }
 
-.skillContainer ul {
-    list-style-position: inside;
+.skillContainer .divider {
+    width: 100%;
+    height: 1px;
+    background: var(--primary-color);
 }
 
 .skillDescriptions {
@@ -209,6 +212,8 @@ section.mySkills h2 {
     align-items: flex-start;
     padding: 0.75rem;
     gap: 0.5rem;
+
+    list-style-position: inside;
     
     /* Inside auto layout */
     
@@ -216,6 +221,9 @@ section.mySkills h2 {
     order: 1;
     align-self: stretch;
     flex-grow: 1;
+}
+.skillDescriptions li {
+    font-size: 1.2rem;
 }
 
 .iconContainer {
@@ -225,7 +233,7 @@ section.mySkills h2 {
     padding: 16px;
     gap: 10px;
 
-    background: hsl(0, 0%, 92%);
+    background: hsl(0,0%, 98%);
     border-radius: 0px 0px 8px 8px;
 
     /* Inside auto layout */
@@ -238,7 +246,7 @@ section.mySkills h2 {
 
 section.myWork {
     background-color: #202021;
-    padding: 4vh 8vw 12vh;
+    padding: 4vh 12vw 12vh;
 }
 section.myWork h2 {
     text-align: center;
@@ -247,12 +255,13 @@ section.myWork h2 {
 }
 section.myWork .workGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
-        "mobileWorkOne mobileWorkTwo"
-        "desktopWork desktopWork"
-        ;
+    "mobileWorkOne"
+    "mobileWorkTwo"
+    "desktopWork"
+    ;
     gap: 4vw 4vh;
 }
 
@@ -283,14 +292,13 @@ section.myWork .workGrid p {
     max-width:100%;
     border-radius:20px;
     box-shadow: 0 1px 4px 0 rgba(0,0,0,.12);
-    margin-bottom: 16px;
 }
 .workGrid .workGridItem div > * {
-    margin: 0.75rem 0;
+    margin: 1.5rem 0;
 }
 
 footer {
-    padding: 4vh 8vw;
+    padding: 4vh 10vw;
     background-color: #202021;
     color: #E7E7E7;
     position:relative;
@@ -306,7 +314,13 @@ footer a {
     text-decoration: none;
 }
 
-footer > div {
+footer .name {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+
+footer .flex-between {
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -314,13 +328,58 @@ footer > div {
 }
 footer .email-container {
     width: 100%;
-    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+    position: relative;
+}
+footer #copy_btn {
+    cursor: pointer;
+}
+
+.email-container .tooltiptext {
+    visibility: hidden;
+    width: 150px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    top: -50px;
+    left: 115px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.email-container .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.email-container .tooltiptext.showTooltip {
+    visibility: visible;
+    opacity: 1;
 }
 
 footer ul {
     display: flex;
     gap: 2rem;
     list-style-type: none;
+}
+
+footer ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .3rem;
 }
 
 
@@ -350,17 +409,6 @@ footer ul {
 
     section.myWork {
         padding: 4vh 16px 12vh;
-    }
-    section.myWork .workGrid {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas:
-        "mobileWorkOne"
-        "mobileWorkTwo"
-        "desktopWork"
-        ;
-        gap: 4vw 4vh;
     }
 
     #bg_line_1 {
