@@ -1,0 +1,118 @@
+.fs-7 {
+  font-size: .875rem;
+}
+
+.bg-wastesmart-subdued {
+  background-color: #F7FFF5;
+}
+
+.text-wastesmart-dark {
+  color: #003311;
+}
+
+.card.bg-wastesmart-subdued {
+  border-color: rgba(0, 51, 17, 0.125);
+}
+
+#hero_section {
+  height: 100vh;
+  width: 100%;
+  overflow:hidden;
+}
+
+#hero_section .hero-image {
+  width: 100%;
+  height: 100%;
+  background: url('../images/Waste-Smart-cover.jpg') no-repeat;
+  background-size: cover;
+  background-position: -50px -55px;
+}
+
+#overview_section ul.contribution-list,
+#overview_section ul.tools-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#process_details > div {
+  min-height: 100vh;
+}
+
+#research .accordion-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#research .research-answer {
+  font-weight: 500;
+  margin-left: .5rem;
+}
+
+#research .survey-one-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+#research .survey-one-image-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#research .survey-one-image-container p {
+  position: absolute;
+  left: 20%;
+  color: #003311;
+}
+
+.carousel-item img {
+  height: 85vh;
+}
+
+#prototype img {
+  max-width: 100%;
+  max-height: 70vh;
+}
+#prototype .row {
+  margin: 1rem 0;
+}
+#prototype .prototype-image-text {
+  margin: 2rem 0;
+}
+#prototype .list-group-item {
+  padding: 2rem 0.5rem;
+}
+
+.timeline-bar-container {
+  display: flex;
+  align-items:center;
+}
+.timeline-bar {
+  border-radius: 0.5rem;
+  width: 33%;
+  min-height: 100vh;
+  color: #003311;
+  background-color: hsl(106, 45%, 75%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  writing-mode: vertical-rl;
+  text-orientation: mixed; 
+}
+.bar-container-one {
+  justify-content: flex-start;
+}
+.bar-container-two {
+  justify-content: center;
+}
+.bar-container-three {
+  justify-content: flex-end;
+}
+.bar-container-three .timeline-bar {
+  min-height: 230vh;
+}

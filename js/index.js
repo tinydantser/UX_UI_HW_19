@@ -9,6 +9,10 @@ let smoother = ScrollSmoother.create({
 
 $(document).ready(function() {
 
+    $("#waste_smart_btn").click(function() {
+        window.location.href = "casestudy.html";
+    });
+
     $("#copy_btn").click(function() {
         navigator.clipboard.writeText("sean.dant@gmail.com");
 
